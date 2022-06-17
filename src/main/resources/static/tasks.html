@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks list</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/index_style.css">
+</head>
+<body>
+<div class="tasks_list">
+    <div>
+    <h2>Tasks list</h2>
+    </div>
+    <ul>
+        <li><h2>Name</h2></li>
+        <li><h3>Description</h3></li>
+        <li>
+            <table class="tasks_table">
+                <tr>
+                    <td>${t.name}</td>
+                    <td>${t.description}</td>
+                    <td>
+                        <form action="/select-task/${t.id}">
+                            <input type="submit" value="Выбрать">
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+
+</div>
+<div>
+    <a href="/profile">Back to profile</a>
+</div>
+</body>
+</html>

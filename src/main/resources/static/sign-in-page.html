@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--meta name="_csrf" th:content="${_csrf.token}"/-->
+    <title>Sign in</title>
+
+    <!--meta http-equiv="Content-type" content="text/html" charset="utf-8"/-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+<div>
+    <!--/*@thymesVar id="message" type="java.lang.String"*/-->
+    <h1 th:text="${message}"></h1>
+</div>
+
+<div class="wrapper">
+    <div class="wrapper__form">
+        <div class="sign-up">
+            <div th:if="${param.logout}">
+                <h3>You have been logged out.</h3>
+            </div>
+            <p th:if="${loginError}" class="error">Wrong user or password</p>
+            <h1 class="form__title title">Welcome</h1>
+            <form action="/login" method="post" class="sign-up__form form">
+                <!--div id='errorMsg' role="alert"><strong><i></i>
+                    <span id='errorTitle'></span></strong><span id='errorText'></span>
+                </div>
+                <th:if test="${param.error != null}">
+                    <div class="alert alert-danger">
+                        <p>Invalid username and password.</p>
+                    </div>
+                </th:if-->
+                <div class="form__input">
+                <label for="username">Username</label>:
+                <input type="text" id="username" name="username" autofocus="autofocus" /> <br />
+                </div>
+                <div class="form__input">
+                <label for="password">Password</label>:
+                <input type="password" id="password" name="password" /> <br />
+                </div>
+                <input type="hidden"
+                       name="${_csrf.parameterName}"
+                       value="${_csrf.token}"/>
+                <div class="form__input">
+                    <!--input type="submit" value="Sign in"-->
+                    <button type="submit">Sign in</button>
+                </div>
+            </form>
+            <p class="sign-up__hint">Don't have an account? <a href="/signup">Sign up</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

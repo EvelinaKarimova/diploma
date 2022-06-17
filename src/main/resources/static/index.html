@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/index_style.css"/>
+    <title>Главная страница</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+    />
+
+    <meta http-equiv="Content-type" content="text/html" charset="utf-8">
+</head>
+<body>
+<header>
+    <div class="menu">
+        <#if authentication??>
+        <ul class="menu__list">
+            <li class="menu__element menu__element_active"><a href="/main-page">Главная</a></li>
+            <li class="menu__element"><a href="/logout">Выход</a></li>
+            <li class="menu__element menu__element_pages"><a href="">PAGES</a>
+                <ul class="pages-list">
+                    <li class="pages-list__element"><a href="/profile">Профиль</a></li>
+                    <li class="pages-list__element"><a href="/tasks">Задания</a></li>
+                </ul>
+            </li>
+        </ul>
+        <#else>
+        <ul class="menu__list">
+            <li class="menu__element menu__element_active"><a href="/main-page">Главная</a></li>
+            <li class="menu__element"><a href="/login">Вход</a></li>
+            <li class="menu__element"><a href="/signup">Регистрация</a></li>
+        </ul>
+    </#if>
+    </div>
+</header>
+<h1>Добро пожаловать!</h1>
+</body>
+</html>

@@ -1,0 +1,183 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.wrapper__form {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up {
+  padding: 70px 0 30px 0;
+  text-align: center;
+  background-color: #fff;
+  width: 390px;
+  border-radius: 5px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.sign-up__form {
+  width: 70%;
+  margin: 0 auto 0 auto;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0 0 50px 0;
+}
+
+.form__input {
+  margin: 0 0 40px 0;
+}
+
+.form__input input[type="email"],
+.form__input input[type="password"],
+.form__input input[type="text"] {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.2;
+  border-bottom: 2px solid #adadad;
+  width: 100%;
+  padding: 10px 5px;
+  transition: 0.7s;
+}
+
+.form__input input[type="email"]:focus,
+.form__input input[type="password"]:focus,
+.form__input input[type="text"]:focus {
+  border-bottom: 2px solid #ff5349;
+}
+
+.form__input button {
+  width: 100%;
+  padding: 10px 5px;
+  color: #fff;
+  border-radius: 25px;
+  background-color: #ff5349;
+  transition: 0.7s;
+}
+
+.form__input button:hover {
+  background-color: #ff8680;
+}
+
+.sign-up__hint {
+  color: #555;
+}
+
+.sign-up__hint a {
+  color: inherit;
+  transition: 0.7s;
+}
+
+.sign-up__hint a:hover {
+  color: #b1dcfc;
+}
+.checkbox {
+  margin-bottom: 20px;
+  width: auto;
+}
+

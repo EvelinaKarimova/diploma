@@ -1,0 +1,52 @@
+.task {
+    margin-top: 20px;
+    margin-left: 200px;
+    max-width: 1000px;
+}
+
+button {
+    margin-top: 10px;
+    width: 100px;
+    padding: 10px 5px;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #ff8680;
+    transition: 0.7s;
+}
+
+.string_input {
+    width: 300px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.text_input {
+    width: 400px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+.hints {
+    margin-top: 50px;
+}
+
+.hint_image {
+    width: 10px;
+}
+
+.answers_list {
+    margin-top: 5px;
+    display: flex;
+    vertical-align: middle;
+    height: 50px;
+    border: 0;
+}
+
+p {
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+h4 {
+    margin-bottom: 30px;
+}
