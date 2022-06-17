@@ -1,15 +1,14 @@
 package ru.itis.diplom.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import ru.itis.diplom.dto.SignUpDto;
 import ru.itis.diplom.services.SignUpService;
 
 import javax.validation.Valid;
-import java.util.Map;
 
 @Controller
 public class SignUpController {
@@ -28,9 +27,7 @@ public class SignUpController {
 
 
     @RequestMapping(value = "/signup", method = RequestMethod.POST)
-    public String doPost(@Valid SignUpDto dto
-            ) {
-        //SignUpDto dto = new SignUpDto((String) model.getAttribute("username"), (String) model.getAttribute("firstName"),"e","e","e@e.e", "e", "e");
+    public String doPost(@Valid SignUpDto dto) {
         signUpService.signUp(dto);
         return "redirect:/login";
     }

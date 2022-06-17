@@ -15,24 +15,6 @@ public class TFCounter {
         this.N = N;
     }
 
-    /*
-    public double frequency(String inputFile, String word) {
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-            String currentLine;
-            int count = 0;
-            while (reader.ready()) {
-                currentLine = reader.readLine();
-                if (currentLine.equals(word)) count++;
-            }
-            return ((double) count / N);
-        } catch (IOException e) {
-            throw new IllegalArgumentException(e);
-        }
-    }
-
-     */
-
     public double frequency(String array, String word) {
         int count = 0;
         String[] arrayList = array.toLowerCase().split("[^а-я]");

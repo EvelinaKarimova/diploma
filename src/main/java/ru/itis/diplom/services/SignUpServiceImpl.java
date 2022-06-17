@@ -10,8 +10,6 @@ import ru.itis.diplom.models.User;
 import ru.itis.diplom.repositories.UserRepository;
 
 import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
 
 @Service
 public class SignUpServiceImpl implements SignUpService {

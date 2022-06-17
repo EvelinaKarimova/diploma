@@ -1,6 +1,5 @@
 package ru.itis.diplom.check;
 
-import org.hibernate.Hibernate;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import ru.itis.diplom.algorithm.VectorSearch;
@@ -27,21 +26,7 @@ public class CheckHandler {
                 if (a.getAnswer().equals(ans)) return true;
             }
             return false;
-        } /*else if  {
-            String[] answers = (String[]) answer;
-            int count = 0;
-            if (answers.length == task.getAnswers().size()) {
-                for (String s : answers) {
-                    for (Answer a: task.getAnswers()) {
-                        if (s.equals(a.getAnswer())) {
-                            count++;
-                        }
-                    }
-                }
-                return count == answers.length;
-            } else return false;
         }
-         */
          else return false;
     }
 }

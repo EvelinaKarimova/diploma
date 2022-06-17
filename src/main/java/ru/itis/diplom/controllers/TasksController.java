@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import ru.itis.diplom.check.CheckHandler;
 import ru.itis.diplom.dto.AnswerDto;
 import ru.itis.diplom.models.Block;
@@ -15,7 +17,6 @@ import ru.itis.diplom.services.TasksService;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Map;
 
 @Controller
 public class TasksController {
@@ -33,7 +34,6 @@ public class TasksController {
 
 
     @GetMapping("/tasks")
-    //@ModelAttribute("tasks")
     public String getTasksList(Model model, Authentication authentication) {
         model.addAttribute("active_menu_attr", "tasks");
         List<Block> allBlocks = tasksService.getAllBlocks();
@@ -77,14 +77,6 @@ public class TasksController {
         model.addAttribute("task", currentTask);
         return "task";
     }
-
-    /*
-    @RequestMapping(value = "/tasks", method = RequestMethod.POST)
-    public String selectTask(Model model) {
-        return "redirect:/task";
-    }
-
-     */
 
     @PostMapping("/answer")
     public String answer(@Valid AnswerDto ans, Model model, Authentication authentication) {

@@ -15,7 +15,6 @@ import java.util.Collections;
 @Data
 @Getter
 @Setter
-//@Component
 public class UserDetailsImpl implements UserDetails {
 
     private User user;
